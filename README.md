@@ -65,7 +65,7 @@ CokeStore Billing App is a web application designed to manage billing operations
 
 
 
-## Data Model
+## Data Model Example
 
 ### User
 
