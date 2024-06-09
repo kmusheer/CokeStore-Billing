@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mohd Moshir Khan">
+    <title>The Coke Store | Billing App</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <div class="headings">
+
+        <h1 class="h1 main-heading">The Coke Store</h1>
+
+        <div id="subhead">
+            <h4 class="h1 sub-heading">Billing App</h4>
+            <div class="search_box">
+                <input type="text" id="searchInput" class="search-input" placeholder="Enter name & Number to search">
+                <button class="search-button" id="searchButton" onclick="searchBills()">Search</button>
+            </div>
+        </div>
+        
+        <!-- Popup modal for displaying search results -->
+        <div id="popupModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="searchResults"></div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container-fluid">
+        <div class="container">
+            <form class="Part-1" id="dissolve-1">
+                <fieldset>
+                    <legend>
+                        Personal Details
+                    </legend>
+                    <div class="Details">
+                        <div class="D1"> Name <span style="color: darkred;">*</span><input type="text" name="" id="name1" class="D2" required> </div>
+                        <div class="D1"> Number <span style="color: darkred;">*</span> <input type="tel" name="" id="phone1" class="D2" required> </div>
+                    </div>
+                    <div class="Details">
+                        <div class="D1"> Email <input type="email" name="" id="email1" class="D2"> </div>
+                        <div class="D1" style="visibility: hidden;"> Email <input type="email" name="" id="email1" class="D2"> </div>
+                    </div>
+                </fieldset>
+            </form>
+
+            <div class="Part-2" id="dissolve-2">
+                <fieldset>
+                    <legend>Menu</legend>
+                    <!-- <div class="menu"> -->
+                    <div class="menu" id="menuContainer">
+                        <div class="Coke" id="hdngs">
+                            <h2 class="Hitem">Items</h2>
+                            <div class="price Hprice">Price</div>
+                            <div class="input" id="qty">
+                                Quantity
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="menu">
+                        </div>
+                    </div>
+                    <div id="userInput">
+                        <button class="Add-button" onclick="addDynamicRow()">Add Row</button>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="container container3" id="print">
+            <div class="tbl">
+                <fieldset>
+                    <legend>Your Bill</legend>
+                    <h3>Your Name:<span id="name2" class="Spn"></span></h3>
+                    <h3>Phone: <span id="phone2" class="Spn"></span></h3>
+                    <h3>Email: <span id="email2" class="Spn"></span></h3>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Menu</th>
+                                <th>Volume</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bill">
+                            <!-- <tr><td>Smosa</td><td>Rs. 10</td><td>1</td><td>10x1 = 10</td></tr> -->
+                        </tbody>
+                    </table>
+                    <hr class="hr">
+                    <h6>Total Amount: ₹ <span id="Amount">0</span></h6>
+                </fieldset>
+            </div>
+            <button onclick="PrintBill()" id="printBtn" class="btn">Print</button>
+        </div>
+    </div>
+    <span class="Footer">Designed & Developed by 
+        <span class="me"><a href="https://musheer.vercel.app/"target="_Blank">Musheer Khan</a></span> &
+        <span class="me"><a href="https://www.linkedin.com/in/moshir-khan/" target="_Blank">LinkedIn</a></span> 
+    </span>
+</body>
+<!-- <script src="script.js"> -->
+<script src="script/script.js">
+</script>
+
+</html>
